@@ -45,7 +45,7 @@ async function api(path) {
  * an `anchor` qualifier). Both cases are not errors for this plugin, as the
  * reference can still be built from other metadata.
  *
- * @see https://docs.softwareheritage.org/devel/architecture/citation.html
+ * @see https://archive.softwareheritage.org/api/1/raw-intrinsic-metadata/citation/swhid/doc/
  *   for how Software Heritage generates citations
  *
  * @param {string} swhid - SWHID, possibly with qualifiers
