@@ -4,6 +4,7 @@ import { describe, it } from 'node:test'
 
 import { Cite, plugins } from '@citation-js/core'
 import '../src/index.js'
+import { getEntryType } from '../src/output.js'
 
 /**
  * Load a saved Software Heritage API response, so that tests of
@@ -203,6 +204,53 @@ describe('swhid', function () {
         assert.strictEqual(new Cite(input).format(format), output)
       })
     }
+  })
+
+  describe('biblatex-software', function () {
+    const HASH = '4df580f838c0db3d0d0c4a6fbc6b658529da2c04'
+    const entryTypeTests = [
+      ['file', `swh:1:cnt:${HASH};anchor=${REV};path=/CITATION.cff`, 'codefragment'],
+      ['subdirectory', `swh:1:dir:${HASH};anchor=${REV};path=/src`, 'softwaremodule'],
+      ['root directory', `swh:1:dir:${HASH};anchor=${REV};path=/`, 'softwareversion'],
+      ['directory without path', `swh:1:dir:${HASH}`, 'softwareversion'],
+      ['release', REL, 'softwareversion'],
+      ['revision', REV, 'softwareversion'],
+      ['snapshot', `swh:1:snp:${HASH}`, 'software']
+    ]
+
+    for (const [name, swhid, type] of entryTypeTests) {
+      it(`uses @${type} for a ${name}`, function () {
+        assert.strictEqual(getEntryType(swhid), type)
+      })
+    }
+
+    it('formats records', function () {
+      const output = new Cite([recordTests[1].input, recordTests[2].input]).format('biblatex-software')
+      assert.strictEqual(output, `@softwareversion{Willighagen2026Citation,
+\tauthor = {Willighagen, Lars G.},
+\tdoi = {10.7717/peerj-cs.214},
+\tdate = {2026-09-18},
+\ttitle = {Citation.js: a format-independent, modular bibliography tool for the browser and command line},
+\turl = {http://dx.doi.org/10.7717/peerj-cs.214},
+\tversion = {v0.9.0},
+\tswhid = {${REL}},
+}
+
+@softwareversion{Octocat2012Hello,
+\tauthor = {Octocat, The},
+\tdate = {2012-03-06},
+\ttitle = {Hello-{World}},
+\turl = {https://archive.softwareheritage.org/${HELLO}},
+\tswhid = {${HELLO}},
+}
+
+`)
+    })
+
+    it('leaves items without SWHID as BibLaTeX', function () {
+      const item = { id: 'foo', type: 'book', title: 'Foo' }
+      assert.strictEqual(new Cite(item).format('biblatex-software'), new Cite(item).format('biblatex'))
+    })
   })
 
   describe('api', function () {

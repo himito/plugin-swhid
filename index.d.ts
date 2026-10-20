@@ -51,5 +51,10 @@ declare module '@citation-js/core' {
         '@swhid/record': (input: SwhidRecord) => CSL[]
       }
     }
+    namespace output {
+      interface Formats {
+        'biblatex-software': (options?: object) => string
+      }
+    }
   }
 }

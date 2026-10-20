@@ -51,4 +51,32 @@ When neither is available, a minimal reference with the SWHID is returned. The S
 | `@swhid/url` | an archive URL, e.g. `https://archive.softwareheritage.org/swh:1:rev:…` |
 | `@swhid/record` | `{ swhid, citation?, release?, revision? }`, the API responses for a SWHID |
 
-Note: the [Software Heritage API](https://archive.softwareheritage.org/api/) is rate-limited for anonymous users (120 requests per hour), and each SWHID takes one or two requests.
+
+
+### Output
+
+#### biblatex-software
+
+Format references for [biblatex-software](https://ctan.org/pkg/biblatex-software), with the entry type that matches what the SWHID points to and a `swhid` field:
+
+```js
+cite.format('biblatex-software')
+// @softwareversion{Willighagen2026Citation,
+// 	author = {Willighagen, Lars G.},
+// 	doi = {10.7717/peerj-cs.214},
+// 	date = {2026-09-18},
+// 	title = {Citation.js: a format-independent, modular bibliography tool for the browser and command line},
+// 	url = {http://dx.doi.org/10.7717/peerj-cs.214},
+// 	version = {v0.9.0},
+// 	swhid = {swh:1:rel:90582c5fcb6a3eb0d48826f3162ac91fd1109f06;origin=https://github.com/citation-js/citation-js},
+// }
+```
+
+| SWHID | Entry type |
+|---|---|
+| file (`cnt`) | `@codefragment` |
+| directory (`dir`) with a `path` below the root | `@softwaremodule` |
+| release (`rel`), revision (`rev`) or root directory (`dir`) | `@softwareversion` |
+| snapshot (`snp`) | `@software` |
+
+References without a SWHID are formatted as plain BibLaTeX.
