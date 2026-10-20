@@ -1,0 +1,35 @@
+{
+  "message": "Merge pull request #6 from Spaceghost/patch-1\n\nNew line at end of file.",
+  "author": {
+    "fullname": "The Octocat <octocat@nowhere.com>",
+    "name": "The Octocat",
+    "email": "octocat@nowhere.com"
+  },
+  "committer": {
+    "fullname": "The Octocat <octocat@nowhere.com>",
+    "name": "The Octocat",
+    "email": "octocat@nowhere.com"
+  },
+  "date": "2012-03-06T15:06:50-08:00",
+  "committer_date": "2012-03-06T15:06:50-08:00",
+  "type": "git",
+  "directory": "b4eecafa9be2f2006ce1b709d6857b07069b4608",
+  "synthetic": false,
+  "metadata": {},
+  "parents": [
+    {
+      "id": "553c2077f0edc3d5dc5d17262f6aa498e69d6f8e",
+      "url": "https://archive.softwareheritage.org/api/1/revision/553c2077f0edc3d5dc5d17262f6aa498e69d6f8e/"
+    },
+    {
+      "id": "762941318ee16e59dabbacb1b4049eec22f0d303",
+      "url": "https://archive.softwareheritage.org/api/1/revision/762941318ee16e59dabbacb1b4049eec22f0d303/"
+    }
+  ],
+  "id": "7fd1a60b01f91b314f59955a4e4d4e80d8edf11d",
+  "extra_headers": [],
+  "merge": true,
+  "url": "https://archive.softwareheritage.org/api/1/revision/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d/",
+  "history_url": "https://archive.softwareheritage.org/api/1/revision/7fd1a60b01f91b314f59955a4e4d4e80d8edf11d/log/",
+  "directory_url": "https://archive.softwareheritage.org/api/1/directory/b4eecafa9be2f2006ce1b709d6857b07069b4608/"
+}

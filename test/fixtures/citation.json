@@ -1,0 +1,8 @@
+{
+  "format": "bibtex",
+  "content": "@softwareversion{swh-rev-75a422b,\n    author = \"Willighagen, Lars G.\",\n    doi = \"https://doi.org/10.7717/peerj-cs.214\",\n    title = \"Citation.js: a format-independent, modular bibliography tool for the browser and command line\",\n    url = \"http://dx.doi.org/10.7717/peerj-cs.214\",\n    swhid = \"swh:1:rev:75a422b4275740aa2b18753e5264f048c2b0cb48\"\n}\n",
+  "source_swhid": "swh:1:cnt:cecf77aa50e9c306f0cb593dea305bb9906628e3;anchor=swh:1:rev:75a422b4275740aa2b18753e5264f048c2b0cb48;path=/CITATION.cff",
+  "error": null,
+  "warning": null,
+  "source_url": "https://archive.softwareheritage.org/api/1/content/sha1_git:cecf77aa50e9c306f0cb593dea305bb9906628e3/raw/"
+}

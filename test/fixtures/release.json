@@ -1,0 +1,15 @@
+{
+  "name": "v0.9.0",
+  "message": "v0.9.0\n-----BEGIN PGP SIGNATURE-----\n\niQIzBAABCgAdFiEEXGzwBvDPsuRTBM16s7j/sYCdCTsFAmqtHK4ACgkQs7j/sYCd\nCTuz9hAAj5muggCam80HhOacitojnF/WapfCA1DOq/ZlwWVMk4lo6mC1zwt1CReo\nFQHwD4G2Pu0ajbwiL7tooiMM5G64qoRa/kNdH8hrgt24fMeZMEaco/mtaubyfcqU\ncCRdHfxIienSx9g8FYfuQ51cNAHk8jd+mRb0pXGho9pgzjD7PkJtK9fMsRhO5Vq8\nGctsRe5k7Zk3nD7+BFH66AXkV2Dt/x7ORaGalTVDa4BowmPcnz+rvaPgCiBN9mAx\nePNMkSQs2Vu5n2M6nmqERNNmPakhzN63ZF+ki7UXpE3G94mkqGDRR2XxLxHzFlBc\nuncO2NVWkIaKzhk25v43X3mJVB2Ys7MZmv6EADCeAslwsangn2sk7if/29qM1CSx\ncY1n+QDuaLAKEACO73ElbLygHTkn/EWh+07Mq2KNBEDLNIZcP7lqwKhqdnCds9yv\naQf8VVuxoofArumszwjThkWwpjCF86VKFY7tHa6Fv74je4dUdaKjesPPuYKJmbqB\nJ7olJ4ZCfgTmGYElW6Jq1kKI/JZQziFBZA7niUMKGEFZknutntZVJuvDXhwxlH8y\nrQt5vfVd6fK3JfZRlQvliWPxTDd4yktnVgw9NqnIeHT9TwszbPdbS6J9NVKHDodc\nsTPyovT6wLVNnKkiDVzSOvGyoSXxP7/L6i9qCwDRgumi8PTsr7U=\n=j7dq\n-----END PGP SIGNATURE-----\n",
+  "target": "51a37ce28fd3508e5cc2957b7d17794cdbad8ed0",
+  "target_type": "revision",
+  "synthetic": false,
+  "author": {
+    "fullname": "Lars Willighagen <lars.willighagen@gmail.com>",
+    "name": "Lars Willighagen",
+    "email": "lars.willighagen@gmail.com"
+  },
+  "date": "2026-09-18T13:12:46+02:00",
+  "id": "90582c5fcb6a3eb0d48826f3162ac91fd1109f06",
+  "target_url": "https://archive.softwareheritage.org/api/1/revision/51a37ce28fd3508e5cc2957b7d17794cdbad8ed0/"
+}

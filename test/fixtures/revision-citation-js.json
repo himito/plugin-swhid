@@ -1,0 +1,31 @@
+{
+  "message": "docs(changelog): fix changelog\n",
+  "author": {
+    "fullname": "Lars Willighagen <lars.willighagen@gmail.com>",
+    "name": "Lars Willighagen",
+    "email": "lars.willighagen@gmail.com"
+  },
+  "committer": {
+    "fullname": "Lars Willighagen <lars.willighagen@gmail.com>",
+    "name": "Lars Willighagen",
+    "email": "lars.willighagen@gmail.com"
+  },
+  "date": "2026-09-18T13:19:33+02:00",
+  "committer_date": "2026-09-18T13:19:33+02:00",
+  "type": "git",
+  "directory": "82be209477df9044d89c24814d7b88e56e1b92f1",
+  "synthetic": false,
+  "metadata": {},
+  "parents": [
+    {
+      "id": "51a37ce28fd3508e5cc2957b7d17794cdbad8ed0",
+      "url": "https://archive.softwareheritage.org/api/1/revision/51a37ce28fd3508e5cc2957b7d17794cdbad8ed0/"
+    }
+  ],
+  "id": "75a422b4275740aa2b18753e5264f048c2b0cb48",
+  "extra_headers": [],
+  "merge": false,
+  "url": "https://archive.softwareheritage.org/api/1/revision/75a422b4275740aa2b18753e5264f048c2b0cb48/",
+  "history_url": "https://archive.softwareheritage.org/api/1/revision/75a422b4275740aa2b18753e5264f048c2b0cb48/log/",
+  "directory_url": "https://archive.softwareheritage.org/api/1/directory/82be209477df9044d89c24814d7b88e56e1b92f1/"
+}
