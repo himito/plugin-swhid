@@ -2,7 +2,7 @@ import assert from 'node:assert'
 import { readFileSync } from 'node:fs'
 import { describe, it } from 'node:test'
 
-import { plugins } from '@citation-js/core'
+import { Cite, plugins } from '@citation-js/core'
 import '../src/index.js'
 
 /**
@@ -109,6 +109,56 @@ const apiTests = [
   }
 ]
 
+// BibTeX and BibLaTeX exports of the records above, with @citation-js/plugin-bibtex
+const bibtexTests = [
+  {
+    name: 'citation and release',
+    input: recordTests[1].input,
+    format: 'bibtex',
+    output: `@misc{Willighagen2026Citation,
+\tauthor = {Willighagen, Lars G.},
+\tdoi = {10.7717/peerj-cs.214},
+\tyear = {2026},
+\tmonth = {sep 18},
+\ttitle = {Citation.js: a format-independent, modular bibliography tool for the browser and command line},
+\turl = {http://dx.doi.org/10.7717/peerj-cs.214},
+\thowpublished = {http://dx.doi.org/10.7717/peerj-cs.214},
+}
+
+`
+  },
+  {
+    name: 'citation and release',
+    input: recordTests[1].input,
+    format: 'biblatex',
+    output: `@software{Willighagen2026Citation,
+\tauthor = {Willighagen, Lars G.},
+\tdoi = {10.7717/peerj-cs.214},
+\tdate = {2026-09-18},
+\ttitle = {Citation.js: a format-independent, modular bibliography tool for the browser and command line},
+\turl = {http://dx.doi.org/10.7717/peerj-cs.214},
+\tversion = {v0.9.0},
+}
+
+`
+  },
+  {
+    name: 'revision without metadata file',
+    input: recordTests[2].input,
+    format: 'bibtex',
+    output: `@misc{Octocat2012Hello,
+\tauthor = {Octocat, The},
+\tyear = {2012},
+\tmonth = {mar 6},
+\ttitle = {Hello-{World}},
+\turl = {https://archive.softwareheritage.org/${HELLO}},
+\thowpublished = {https://archive.softwareheritage.org/${HELLO}},
+}
+
+`
+  }
+]
+
 describe('swhid', function () {
   describe('type', function () {
     it('recognises SWHIDs', function () {
@@ -143,6 +193,14 @@ describe('swhid', function () {
     for (const { name, input, output } of recordTests) {
       it(name, function () {
         assert.deepStrictEqual(plugins.input.chain(input, { generateGraph: false }), [output])
+      })
+    }
+  })
+
+  describe('bibtex', function () {
+    for (const { name, input, format, output } of bibtexTests) {
+      it(`${name} (${format})`, function () {
+        assert.strictEqual(new Cite(input).format(format), output)
       })
     }
   })
